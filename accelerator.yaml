@@ -1,0 +1,41 @@
+accelerator:
+  displayName: Fastify Sveltekit
+  description: Experimental app using Fastify for server, and SvelteKit for frontend.
+  iconUrl: https://raw.githubusercontent.com/sample-accelerators/icons/master/icon-tanzu-light.png
+  tags:
+  - fullstack
+  - svelte
+  - fastify
+
+  options:
+  - name: toggleReadme
+    label: Replace README
+    inputType: toggle
+    dataType: boolean
+    display: true
+    defaultValue: true
+
+  - name: description
+    label: Description
+    inputType: textarea
+    display: true
+    defaultValue: ""
+    dependsOn:
+      name: toggleReadme
+
+engine:
+  merge:
+  - exclude: [ 'template/**' ]
+  - condition: "#toggleReadme"
+    include: [ "template/**" ]
+    chain:
+      - type: ReplaceText
+        substitutions:
+         - text: ">>projectName"
+           with: "#projectName"
+         - text: ">>description"
+           with: "#description"
+      - type: RewritePath
+        regex: '.*.md'
+        rewriteTo: "'README.md'"
+  
