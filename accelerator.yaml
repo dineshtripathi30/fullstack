@@ -1,0 +1,16 @@
+accelerator:
+  displayName: Fastify Sveltekit
+  description: Experimental app using Fastify for server, and SvelteKit for frontend.
+  iconUrl: https://raw.githubusercontent.com/sample-accelerators/icons/master/icon-tanzu-light.png
+  tags:
+  - fullstack
+  - svelte
+  - fastify
+  # options:
+  # - name: optionName
+  #   label: Nice Label
+  #   display: true
+  #   defaultValue: ""
+engine:
+  include:
+  - '**'
