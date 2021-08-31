@@ -13,7 +13,7 @@ accelerator:
     inputType: toggle
     dataType: boolean
     display: true
-    defaultValue: true
+    defaultValue: false
 
   - name: description
     label: Description
