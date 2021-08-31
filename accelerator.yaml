@@ -8,7 +8,7 @@ accelerator:
   - fastify
 
   options:
-  - name: replaceReadme
+  - name: toggleReadme
     inputType: toggle
     dataType: boolean
     label: Replace README
