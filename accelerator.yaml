@@ -6,11 +6,15 @@ accelerator:
   - fullstack
   - svelte
   - fastify
-  # options:
-  # - name: optionName
-  #   label: Nice Label
-  #   display: true
-  #   defaultValue: ""
+
+  options:
+  - name: replaceReadme
+    inputType: toggle
+    dataType: boolean
+    label: Replace README
+    display: true
+    defaultValue: true
+
 engine:
   include:
   - '**'
