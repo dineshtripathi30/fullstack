@@ -1,0 +1,10 @@
+apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
+kind: Accelerator
+metadata:
+  name: fullstack
+spec:
+  git:
+    url: https://github.com/jldec/fullstack
+    ref:
+      branch: bad-non-binary
+    interval: 10s
